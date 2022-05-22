@@ -480,7 +480,7 @@ def play():
       BLK()
       print("Some countries stil encourage Male Dominancy so it is very hard for Women to start Businesses ")
       BLK()
-      print('The Communities present in the town of Dioboulou support each other but the state of the town is not good due to the low HDI socres present in Senegal ')
+      print('The Communities present in the town of Dioboulou support each other but the overall condition of the town is not good due to the low HDI scores present in Senegal ')
       BLK()
       print("Our School District has given our Team 200 dollars to loan to a group/person in need of money")
       BLK()
@@ -489,7 +489,7 @@ def play():
       print("This game is based on a loan that asked from the 08-Koute Diomboulou. It asked for a couple thousand for a clothing store ")
       BLK()
       print('We hope that this loan will help make impact on this community')
-      t.sleep(19)
+      t.sleep(25)
       c.clear()
     else:
       print('There was no operation found corropsonding to the numeral submited')
