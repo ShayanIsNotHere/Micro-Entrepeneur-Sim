@@ -25,7 +25,10 @@ def play():
     input_key = ''
   
   t.sleep(3)
-  while True : 
+  while True :
+    if Cash < 0:
+      Debt += abs(Cash)
+      Cash = 0
     for x in range(Menu_Access):
       print(Menu[x])
     BLK()
