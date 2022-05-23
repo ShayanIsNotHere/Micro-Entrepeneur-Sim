@@ -40,9 +40,9 @@ def play():
       print('')
       print('Skirt:'+ str(Products_Inventory['Skirt']))
       BLK()
-      print('White T-Shirts: '+ str(Products_Inventory['W-Tshirt']))
+      print('White T-Shirt: '+ str(Products_Inventory['W-Tshirt']))
       BLK()
-      print('Blue T-Shirts: '+str(Products_Inventory['B-Tshirt']))
+      print('Blue T-Shirt: '+str(Products_Inventory['B-Tshirt']))
       BLK()
       print('Jeans: '+str(Products_Inventory['Jeans']))
       for x in range(3):
