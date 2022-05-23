@@ -252,12 +252,14 @@ def play():
       input_key = input('Your Choice: ')
       if input_key == '1':
         c.clear()
-        print('You take a yard of white fabric')
+        INRT()
+        input_key = input("How many: ")
+        print('You take some white fabric')
         t.sleep(4)
         
         c.clear()
-        Cash -= Buy_Prices_Fabrics['1']
-        Products_Inventory['W-Fabric'] += 1
+        Cash -= Buy_Prices_Fabrics['1']* int(input_key)
+        Products_Inventory['W-Fabric'] += int(input_key)
         t.sleep(1)
         print('Cash:'+ str(Cash))
         t.sleep(2)
@@ -267,14 +269,13 @@ def play():
         print(Products_Inventory)
         t.sleep(5)
       elif input_key == '2':
-        c.clear()
-        print('You take yard of blue fabric')
+        INRT()
+        input_key = input("How many: ")
+        print('You take some blue fabric')
         t.sleep(4)
-        
         c.clear()
-        Cash -= Buy_Prices_Fabrics['2']
-        Products_Inventory['B-Fabric'] += 1
-        t.sleep(1)
+        Cash -= Buy_Prices_Fabrics['2']* int(input_key)
+        Products_Inventory['B-Fabric'] += int(input_key)
         print('Cash:'+ str(Cash))
         t.sleep(2)
         c.clear()
@@ -283,13 +284,14 @@ def play():
         print(Products_Inventory)
         t.sleep(3)
       elif input_key == '3':
-        c.clear()
-        print('You take a yard of pink fabric')
+        INRT()
+        input_key = input("How many: ")
+        print('You take some Pink fabric')
         t.sleep(4)
+        
         c.clear()
-        Cash -= Buy_Prices_Fabrics['3']
-        Products_Inventory['P-Fabric'] += 1
-        t.sleep(1)
+        Cash -= Buy_Prices_Fabrics['3']* int(input_key)
+        Products_Inventory['P-Fabric'] += int(input_key)
         print('Cash:'+ str(Cash))
         t.sleep(2)
         c.clear()
@@ -298,14 +300,14 @@ def play():
         print(Products_Inventory)
         t.sleep(3)
       elif input_key == '4':
-        c.clear()
-        print('You take a yard of denim')
+        INRT()
+        input_key = input("How many: ")
+        print('You take some Denim')
         t.sleep(4)
         
         c.clear()
-        Cash -= Buy_Prices_Fabrics['4']
-        Products_Inventory['Denim'] += 1
-        t.sleep(1)
+        Cash -= Buy_Prices_Fabrics['4']* int(input_key)
+        Products_Inventory['Denim'] += int(input_key)
         print('Cash:'+ str(Cash))
         t.sleep(2)
         c.clear()
