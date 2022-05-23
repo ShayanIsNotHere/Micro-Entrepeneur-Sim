@@ -12,12 +12,12 @@ def play():
   Chance_Key = 0
   input_key = 0
   clear_check = 0
-  Customer_Chance = [1,1,1,1,1,1,1,1]
+  Customer_Chance = [1,0,1,1,0,1,0,1]
   Products_Inventory = {"Pants":5,"Skirt":0,'W-Tshirt':0,'B-Tshirt':0,'Jeans':0,'W-Fabric':0,'B-Fabric':0,'P-Fabric':0,'Denim':0}
   Products_Prices = {"Pants":10.50,"Skirt":11.25,'W-Tshirt':19.25,'B-Tshirt':19.56,'Jean':14.67}
   Buy_Prices_Garments = {'1':13.45,'2':13.56,'3':14.78}
   Buy_Prices_Fabrics = {'1': 4,'2':4,'3':4,'4':3.20}
-  Menu = ['Diomboulou Clothing Store',"________________________","","",'1. Sell','2. Buy',"3. Make",'4. Stats','5. About Us']
+  Menu = ['Diomboulou Clothing Store',"________________________","","",'1. Sell','2. Buy',"3. Make",'4. Account','5. About Us']
   Sell_Menu = ['Fabrics and Garments Shop','_________________________','','','1.Garments','2.Fabrics']
   Garments_Menu = ['Garments Available','__________________','','','1. White T-shirt','2 .Blue T-shirt','3. Jeans']
   Fabrics_Menu = ['Fabrics Available','_________________','','','1. White Fabric','2. Blue Fabric','3. Pink Fabric','4. Denim']
@@ -75,28 +75,28 @@ def play():
             print(' No one seems interested in your store for now')
             t.sleep(4)
             c.clear()
-        elif input_key.lower() == 'skirt':
-          if Products_Inventory['Skirt'] >0:
-            Chance_Key = random.randint(0,7)
-            if Customer_Chance[Chance_Key] == 1:
-              t.sleep(2)
-              print('A customer checks out your store and decides to buy a Skirt')
-              if Debt >0:
-                Cash +=0.5*(Products_Prices['Skirt'])
-                Debt -= 0.5*(Products_Prices['Skirt'])
-              elif Debt <= 0:
-                Cash += Products_Prices['Skirt']
-              t.sleep(3)
-              c.clear()
-              Products_Inventory['Skirt'] =(Products_Inventory['Skirt'])-1
-              print('Cash:' + str(Cash))
-              print('Debt:'+ str(Debt))
-              t.sleep(6)
-              c.clear() 
-            else:
-              print(' No one seems interested in your store for now')
-              t.sleep(4)
-              c.clear()
+      elif input_key.lower() == 'skirt':
+        if Products_Inventory['Skirt'] >0:
+          Chance_Key = random.randint(0,7)
+          if Customer_Chance[Chance_Key] == 1:
+            t.sleep(2)
+            print('A customer checks out your store and decides to buy a Skirt')
+            if Debt >0:
+              Cash +=0.5*(Products_Prices['Skirt'])
+              Debt -= 0.5*(Products_Prices['Skirt'])
+            elif Debt <= 0:
+              Cash += Products_Prices['Skirt']
+            t.sleep(3)
+            c.clear()
+            Products_Inventory['Skirt'] =(Products_Inventory['Skirt'])-1
+            print('Cash:' + str(Cash))
+            print('Debt:'+ str(Debt))
+            t.sleep(6)
+            c.clear() 
+          else:
+            print(' No one seems interested in your store for now')
+            t.sleep(4)
+            c.clear()
       elif input_key.lower() == 'white t-shirt':
         if Products_Inventory['W-Tshirt'] >0:
           Chance_Key = random.randint(0,7)
@@ -491,6 +491,7 @@ def play():
       print('We hope that this loan will help make impact on this community')
       t.sleep(25)
       c.clear()
+    elif input_key == '69'
     else:
       print('There was no operation found corropsonding to the numeral submited')
     t.sleep(3)
